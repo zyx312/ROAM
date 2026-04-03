@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "main-app",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "/Users/zyx/Desktop/WorkToDo/ROAM/docs"],
+      "port": 8080
+    }
+  ]
+}
