@@ -138,6 +138,14 @@ Germany's Road Traffic Remote Driving Ordinance (December 2025) is Europe's firs
 
 Apache License 2.0 — free for commercial use, modification, and distribution.
 
+## Author
+
+**[Yuxin Zhang (张玉新)](https://autozyx.com)** — Associate Professor at Jilin University, Chief Safety Expert at ZYT, Co-founder & CEO of DRIVEResearch.
+
+- **Website**: [autozyx.com](https://autozyx.com)
+- **LinkedIn**: [linkedin.com/in/zhangyuxin](https://www.linkedin.com/in/zhangyuxin/)
+- **Google Scholar**: [Scholar Profile](https://scholar.google.com.au/citations?user=W8YoarEAAAAJ&hl=en)
+
 ## Citation
 
 If you use ROAM in your research, please cite:
