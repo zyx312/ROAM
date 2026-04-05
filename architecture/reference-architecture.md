@@ -540,7 +540,7 @@ Koopman explicitly notes that these role assignments are independent of SAE J301
 Any claim that "L4 means no humans involved" misrepresents real-world operational requirements.
 
 **Reference:**
-[1] Koopman, P., "Human Roles in AVs and Embodied AI Systems," *Phil & Junko on AV Safety*, Substack, April 4, 2026. [Link](https://philkoopman.substack.com/p/human-roles-in-avs-and-embodied-ai)
+[1] Koopman, P., "Human Roles in AVs and Embodied AI Systems," *Phil & Junko on AV Safety*, Substack, April 4, 2026. [Link](https://philkoopman.substack.com/p/embodied-ai-accountability-for-remote)
 
 ---
 

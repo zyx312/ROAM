@@ -329,7 +329,7 @@ The ROAM project will adhere to open-source collaboration principles, providing 
 
 [43] Cui, Z. et al., "C-TRAIL: A Commonsense World Framework for Trajectory Planning in Autonomous Driving," *IEEE Transactions on Vehicular Technology*, 2026. GitHub: [https://github.com/ZhihongCui/CTRAIL](https://github.com/ZhihongCui/CTRAIL)
 
-[44] Koopman, P., "Human Roles in AVs and Embodied AI Systems," *Phil & Junko on AV Safety*, Substack, April 4, 2026. Proposes a 6-role × 2-location = 12-combination framework challenging the "assistant vs. driver" dichotomy and arguing that remote deciders bear substantive safety responsibility. [Link](https://philkoopman.substack.com/p/human-roles-in-avs-and-embodied-ai)
+[44] Koopman, P., "Human Roles in AVs and Embodied AI Systems," *Phil & Junko on AV Safety*, Substack, April 4, 2026. Proposes a 6-role × 2-location = 12-combination framework challenging the "assistant vs. driver" dichotomy and arguing that remote deciders bear substantive safety responsibility. [Link](https://philkoopman.substack.com/p/embodied-ai-accountability-for-remote)
 
 ---
 
