@@ -30,6 +30,7 @@ In March 2026, a [US Congressional investigation](docs/Markey-Remote-Back-Seat-O
 3. 🏗️ **Reference Architecture** — Three-layer decision model with mode-specific responsibility matrix
 4. 📊 **Evaluation Benchmarks** — Mode-differentiated KPIs and baseline data
 5. 🔧 **Technology Pillars** — Six-pillar technical foundation (perception, teleop, wireless, AI trust, cybersecurity, human factors)
+6. 📜 **Standards Roadmap** — Three-tier proposal path to formalize ROAM as a group / national / international standard ([`standards/`](standards/))
 
 ## L4 is Not Only Robotaxi
 
@@ -115,16 +116,21 @@ ROAM/
 ├── incidents/              # Incident database (YAML files)
 ├── taxonomy/               # Classification systems
 │   ├── scenario-taxonomy-v1.0.md      # 6 scenario categories
-│   ├── operating-models-v1.0.md       # 10 operating modes (NEW)
+│   ├── operating-models-v1.0.md       # 10 operating modes
 │   ├── severity-scale.md
 │   └── urgency-scale.md
 ├── architecture/           # Reference architecture & responsibility mapping
 │   ├── reference-architecture.md      # Three-layer decision model
-│   └── responsibility-matrix.md       # 10 modes × 3 layers (NEW)
+│   └── responsibility-matrix.md       # 10 modes × 3 layers
 ├── benchmarks/             # KPIs and baseline data
+├── standards/              # Standards landscape & proposal roadmap (NEW)
+│   ├── README.md                      # Standards strategy overview
+│   ├── landscape.md                   # Standards landscape survey
+│   ├── proposal-roadmap.md            # 3-tier proposal roadmap
+│   └── gb-draft-comments-2026-04.md   # Mandatory GB enhancement proposal
 ├── website/                # GitHub Pages website (archived design)
 └── docs/                   # Deployed site + white papers and research
-    ├── technology-pillars.md          # Six technology pillars (NEW)
+    ├── technology-pillars.md          # Six technology pillars
     ├── literature-review-en.md
     ├── literature-review.md
     └── related-standards.md
