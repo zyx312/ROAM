@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROAM — 无人驾驶出租车运营异常管理平台</title>
+<title>ROAM — L4 自动驾驶远程运营与异常管理开源框架</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
 <style>
@@ -140,8 +140,8 @@ footer a { color:var(--accent); }
 
 <header>
   <h1>ROAM</h1>
-  <p class="sub">RoboTaxi Operations Anomaly Management</p>
-  <p class="desc cn"><span class="cn-title">无人驾驶出租车运营异常管理平台</span><span class="cn-sub">开源事故数据库 · 场景分类体系 · 参考架构 · 评价基准</span></p>
+  <p class="sub">Remote Operations &amp; Anomaly Management</p>
+  <p class="desc cn"><span class="cn-title">L4 自动驾驶远程运营与异常管理开源框架</span><span class="cn-sub">事件数据库 · 场景分类 · 10 种运营模式 · 参考架构 · 评价基准 · 技术支柱</span></p>
   <p class="desc en">Open-source incident database, scenario taxonomy,<br>reference architecture & evaluation benchmarks for robotaxi remote operations</p>
   <div class="actions">
     <a href="https://github.com/AutoZYX/ROAM" class="btn btn-primary"><span class="cn">GitHub 仓库</span><span class="en">GitHub Repo</span></a>
@@ -165,9 +165,95 @@ footer a { color:var(--accent); }
     </div>
   </section>
 
+  <!-- Operating Models -->
+  <section id="operating-models">
+    <h2 class="sec-title"><span class="cn">L4 运营模式：不止 Robotaxi</span><span class="en">Operating Models: Beyond Robotaxi</span></h2>
+    <p class="sec-sub"><span class="cn">ROAM 覆盖 10 种 L4 自动驾驶运营模式，涵盖商业运营、个人所有、公共交通、专用环境四大类</span><span class="en">ROAM covers 10 L4 operating modes across commercial, personal ownership, public transit, and specialized environments</span></p>
+
+    <div class="alert" style="border-color:#c8d5e8; background:#f0f4fa;">
+      <p style="color:#2c4a6e;"><span class="cn"><strong>关键洞察：</strong>L4 的未来不是单一的 Robotaxi。随着技术成熟，OEM 会将 L4 能力销售给消费者（类 Tesla 模式）；车主可能通过订阅方式使用 L4 能力；车辆闲时可能自主去做出租运营。此时 <strong>OEM 从制造商升级为服务提供者</strong>，必须为每一辆售出的 L4 车辆提供 7×24 远程运营支持。ROAM 正是为这种多模式未来设计的开源治理框架。</span><span class="en"><strong>Key insight:</strong> The future of L4 is not only Robotaxi. As technology matures, OEMs will sell L4 capability to consumers (Tesla-like model); owners may subscribe to L4 services; idle vehicles may autonomously operate as ride-hail. At that point <strong>OEMs transition from manufacturers to service providers</strong>, obliged to provide 24/7 remote operations support for every L4 vehicle sold. ROAM is designed as the open governance framework for this multi-mode future.</span></p>
+    </div>
+
+    <div class="tbl-wrap" style="margin-top:20px;">
+    <table>
+      <thead><tr>
+        <th><span class="cn">类别</span><span class="en">Category</span></th>
+        <th><span class="cn">模式</span><span class="en">Mode</span></th>
+        <th><span class="cn">车辆所有</span><span class="en">Ownership</span></th>
+        <th><span class="cn">远程运营责任</span><span class="en">Remote Ops Responsibility</span></th>
+        <th><span class="cn">代表</span><span class="en">Examples</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td rowspan="3" style="background:#fef8ec;color:#7a5c10;font-weight:700;"><span class="cn">商业运营</span><span class="en">Commercial</span></td>
+          <td><strong>M1</strong> <span class="cn">Robotaxi 运营商车队</span><span class="en">Robotaxi Operator Fleet</span></td>
+          <td><span class="cn">运营商</span><span class="en">Operator</span></td>
+          <td><span class="cn">运营商 ROC</span><span class="en">Operator ROC</span></td>
+          <td>Waymo · Apollo Go · Pony.ai</td>
+        </tr>
+        <tr><td><strong>M2</strong> <span class="cn">OEM 直营车队</span><span class="en">OEM Direct Fleet</span></td>
+          <td>OEM</td><td>OEM ROC</td>
+          <td>Tesla Robotaxi · Zeekr Mobility</td>
+        </tr>
+        <tr><td><strong>M3</strong> <span class="cn">车队即服务</span><span class="en">Fleet-as-a-Service</span></td>
+          <td><span class="cn">租赁商</span><span class="en">Leasing Co.</span></td>
+          <td><span class="cn">平台+车队主</span><span class="en">Platform + Fleet owner</span></td>
+          <td>Hertz × AV</td>
+        </tr>
+        <tr><td rowspan="3" style="background:#fdf0f0;color:#8a2020;font-weight:700;"><span class="cn">个人所有</span><span class="en">Personal</span></td>
+          <td><strong>M4</strong> <span class="cn">个人所有 + OEM 订阅</span><span class="en">Personal + OEM Subscription</span></td>
+          <td><span class="cn">消费者</span><span class="en">Consumer</span></td>
+          <td><strong style="color:#8a2020;"><span class="cn">OEM（服务化）</span><span class="en">OEM (service model)</span></strong></td>
+          <td>Tesla FSD 订阅 · 蔚来</td>
+        </tr>
+        <tr><td><strong>M5</strong> <span class="cn">个人所有 + 闲时共享</span><span class="en">Personal + Shared</span></td>
+          <td><span class="cn">消费者</span><span class="en">Consumer</span></td>
+          <td><strong><span class="cn">OEM/平台动态切换</span><span class="en">OEM/Platform dynamic</span></strong></td>
+          <td>Tesla Robotaxi Network</td>
+        </tr>
+        <tr><td><strong>M6</strong> <span class="cn">纯私人 L4</span><span class="en">Pure Private L4</span></td>
+          <td><span class="cn">消费者</span><span class="en">Consumer</span></td>
+          <td><span class="cn">OEM+车主兜底</span><span class="en">OEM + owner fallback</span></td>
+          <td>Mercedes DRIVE PILOT</td>
+        </tr>
+        <tr><td rowspan="2" style="background:#ecfaec;color:#1f5a1f;font-weight:700;"><span class="cn">公共交通</span><span class="en">Public Transit</span></td>
+          <td><strong>M7</strong> <span class="cn">L4 公交巴士</span><span class="en">L4 Public Bus</span></td>
+          <td><span class="cn">公交/政府</span><span class="en">Transit/Gov</span></td>
+          <td><span class="cn">双责任</span><span class="en">Dual responsibility</span></td>
+          <td>轻舟 Robobus · 宇通</td>
+        </tr>
+        <tr><td><strong>M8</strong> <span class="cn">L4 微循环接驳</span><span class="en">Micro-Transit</span></td>
+          <td><span class="cn">运营方</span><span class="en">Operator</span></td>
+          <td><span class="cn">运营方</span><span class="en">Operator</span></td>
+          <td><span class="cn">园区/景区接驳</span><span class="en">Campus/park shuttle</span></td>
+        </tr>
+        <tr><td rowspan="2" style="background:#f0f4fa;color:#2c4a6e;font-weight:700;"><span class="cn">专用环境</span><span class="en">Specialized</span></td>
+          <td><strong>M9</strong> <span class="cn">无人配送</span><span class="en">Last-Mile Delivery</span></td>
+          <td><span class="cn">物流企业</span><span class="en">Logistics</span></td>
+          <td><span class="cn">物流企业</span><span class="en">Logistics ROC</span></td>
+          <td>美团 · 京东 · Nuro</td>
+        </tr>
+        <tr><td><strong>M10</strong> <span class="cn">特定环境专用</span><span class="en">Restricted Environment</span></td>
+          <td><span class="cn">客户企业</span><span class="en">Client</span></td>
+          <td><span class="cn">集成商+客户</span><span class="en">Integrator+client</span></td>
+          <td><span class="cn">矿区/港口/机场</span><span class="en">Mine/port/airport</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <div style="margin-top:20px; padding:16px 20px; background:var(--bg2); border-radius:6px; border-left:3px solid var(--accent);">
+      <p style="font-size:1.05rem; color:var(--text2); line-height:1.7;"><span class="cn"><strong>新增异常类别：</strong>在 M5 模式（个人所有 + 闲时共享）下，存在全新的"所有权/使用权切换冲突"异常——例如车主紧急召回正在载客的车辆、共享期间的保险责任边界等。ROAM 场景分类 v1.1 将新增 Category G 专门覆盖这类异常。</span><span class="en"><strong>Novel anomaly class:</strong> M5 (Personal + Shared) introduces a new "ownership/usage transition conflict" anomaly type — e.g., owner urgently recalling a vehicle in service, insurance boundary during shared sessions. Scenario Taxonomy v1.1 will add Category G to cover these.</span></p>
+    </div>
+
+    <p style="margin-top:16px;color:var(--text3);font-size:0.95rem;">
+      <span class="cn">完整定义：<a href="https://github.com/AutoZYX/ROAM/blob/main/taxonomy/operating-models-v1.0.md">operating-models-v1.0.md</a> · 责任矩阵：<a href="https://github.com/AutoZYX/ROAM/blob/main/architecture/responsibility-matrix.md">responsibility-matrix.md</a></span>
+      <span class="en">Full definitions: <a href="https://github.com/AutoZYX/ROAM/blob/main/taxonomy/operating-models-v1.0.md">operating-models-v1.0.md</a> · Responsibility matrix: <a href="https://github.com/AutoZYX/ROAM/blob/main/architecture/responsibility-matrix.md">responsibility-matrix.md</a></span>
+    </p>
+  </section>
+
   <section>
     <h2 class="sec-title"><span class="cn">四个模块</span><span class="en">Four Modules</span></h2>
-    <p class="sec-sub"><span class="cn">构成无人驾驶出租车远程运营的完整开源基线</span><span class="en">A complete open-source baseline for robotaxi remote operations</span></p>
+    <p class="sec-sub"><span class="cn">构成 L4 自动驾驶远程运营的完整开源基线</span><span class="en">A complete open-source baseline for L4 autonomous mobility remote operations</span></p>
     <div class="pillars">
       <div class="pillar">
         <div class="pillar-num"><span class="cn">模块一</span><span class="en">Module 1</span></div>
@@ -381,6 +467,60 @@ footer a { color:var(--accent); }
     </p>
   </section>
 
+  <!-- Technology Pillars -->
+  <section id="technology-pillars">
+    <h2 class="sec-title"><span class="cn">六大技术支柱</span><span class="en">Six Technology Pillars</span></h2>
+    <p class="sec-sub"><span class="cn">L4 远程运营需要多个技术领域深度融合，单一技术无法独立支撑</span><span class="en">L4 remote operations require deep integration of multiple technology domains — no single technology can stand alone</span></p>
+
+    <div class="pillars" style="grid-template-columns:repeat(3,1fr);">
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 1</span><span class="en">Pillar 1</span></div>
+        <h3><span class="cn">自动驾驶感知与决策</span><span class="en">Perception & Decision</span></h3>
+        <p><span class="cn">异常自识别、不确定性量化、ODD 监控、SOTIF 触发条件。决定"异常能否被识别"。</span><span class="en">Anomaly self-detection, uncertainty quantification, ODD monitoring, SOTIF triggers. Determines "can anomalies be detected".</span></p>
+        <div class="align"><span class="cn">ISO 21448 · ISO/PAS 8800 · GB/T 44721</span><span class="en">ISO 21448 · ISO/PAS 8800 · GB/T 44721</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 2</span><span class="en">Pillar 2</span></div>
+        <h3><span class="cn">远程遥控与人机交互</span><span class="en">Teleoperation & HMI</span></h3>
+        <p><span class="cn">直接/间接控制、waypoint 规划、操作员情境感知、认知负荷管理。玻璃到玻璃延迟 &lt; 200 ms。</span><span class="en">Direct/indirect control, waypoint planning, operator situation awareness, cognitive load management. Glass-to-glass latency &lt; 200 ms.</span></p>
+        <div class="align"><span class="cn">SAE J3016 · BSI PAS 1881 · T/CSAE 200</span><span class="en">SAE J3016 · BSI PAS 1881 · T/CSAE 200</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 3</span><span class="en">Pillar 3</span></div>
+        <h3><span class="cn">无线通信网络</span><span class="en">Wireless Communication</span></h3>
+        <p><span class="cn">5G URLLC、网络切片、C-V2X、5G-Advanced、LEO 卫星备份。99.999% 可靠性，抖动 &lt; 5 ms。</span><span class="en">5G URLLC, network slicing, C-V2X, 5G-Advanced, LEO satellite backup. 99.999% reliability, jitter &lt; 5 ms.</span></p>
+        <div class="align">3GPP TS 22.186 · IEEE 802.11bd · YD/T 3977</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 4</span><span class="en">Pillar 4</span></div>
+        <h3><span class="cn">AI 辅助决策与信任校准</span><span class="en">AI Decision & Trust</span></h3>
+        <p><span class="cn">决策置信度、自动升级机制、LLM 增强、可信 AI 治理。信任校准误差 &lt; 15%。</span><span class="en">Decision confidence, auto-escalation, LLM augmentation, trustworthy AI governance. Trust calibration error &lt; 15%.</span></p>
+        <div class="align"><span class="cn">NIST AI RMF · EU AI Act · ISO/IEC 42001 · GB/T 42755</span><span class="en">NIST AI RMF · EU AI Act · ISO/IEC 42001 · GB/T 42755</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 5</span><span class="en">Pillar 5</span></div>
+        <h3><span class="cn">网络安全与数据保护</span><span class="en">Cybersecurity & Data</span></h3>
+        <p><span class="cn">整车安全、OTA 安全、数据主权、隐私保护、远程通道安全。CVE 补丁 &lt; 30 天。</span><span class="en">Vehicle security, OTA security, data sovereignty, privacy, remote channel security. CVE patch &lt; 30 days.</span></p>
+        <div class="align"><span class="cn">ISO/SAE 21434 · UN R155/R156 · GB 44495/44496 · PIPL</span><span class="en">ISO/SAE 21434 · UN R155/R156 · GB 44495/44496 · PIPL</span></div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num"><span class="cn">支柱 6</span><span class="en">Pillar 6</span></div>
+        <h3><span class="cn">运营组织与人因</span><span class="en">Operations & Human Factors</span></h3>
+        <p><span class="cn">操作员资质、训练认证、工作负荷、跨时区协同、应急组织。班次 ≤ 2 h，初训 ≥ 120 h。</span><span class="en">Operator qualification, training, workload, cross-timezone coordination, emergency organization. Shift ≤ 2 h, initial training ≥ 120 h.</span></p>
+        <div class="align"><span class="cn">FAA Part 107 · ICAO Doc 10019 · CA DMV · GB/T 40429</span><span class="en">FAA Part 107 · ICAO Doc 10019 · CA DMV · GB/T 40429</span></div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px; padding:16px 20px; background:var(--bg2); border-radius:6px; border-left:3px solid var(--accent);">
+      <p style="font-size:1.05rem; color:var(--text2); line-height:1.7;"><span class="cn"><strong>中国标准与国际标准的双语桥接：</strong>六大支柱涉及的中国标准与国际标准大多存在对应关系：ISO 21448↔GB/T 44721（SOTIF）、ISO/SAE 21434↔GB 44495（网络安全）、UN R156↔GB 44496（OTA）、SAE J3016↔GB/T 40429（自动驾驶分级）、3GPP TS 22.186↔YD/T 3977（C-V2X）、ISO 34502↔GB/T 41798（场景测试）。这为国内研究者提供了对标国际前沿的明确路径。</span><span class="en"><strong>China-International Standards Bridge:</strong> Most technology pillar standards have Chinese counterparts: ISO 21448↔GB/T 44721 (SOTIF), ISO/SAE 21434↔GB 44495 (cybersecurity), UN R156↔GB 44496 (OTA), SAE J3016↔GB/T 40429 (automation levels), 3GPP TS 22.186↔YD/T 3977 (C-V2X), ISO 34502↔GB/T 41798 (scenarios). This provides Chinese researchers with clear alignment to international frontier.</span></p>
+    </div>
+
+    <p style="margin-top:16px;color:var(--text3);font-size:0.95rem;">
+      <span class="cn">完整参考文献与行业最佳实践：<a href="technology-pillars.md">technology-pillars.md</a> · 50+ 学术文献、20+ 标准、15+ 行业案例</span>
+      <span class="en">Full references and best practices: <a href="technology-pillars.md">technology-pillars.md</a> · 50+ academic papers, 20+ standards, 15+ industry cases</span>
+    </p>
+  </section>
+
   <!-- Taxonomy Detail -->
   <section>
     <h2 class="sec-title"><span class="cn">场景分类体系 v1.0</span><span class="en">Scenario Taxonomy v1.0</span></h2>
@@ -472,35 +612,45 @@ footer a { color:var(--accent); }
     <p class="sec-sub"><span class="cn">ROAM 是开源基线，各方可在此基础上构建定制化平台</span><span class="en">An open baseline — build your customized platform on top</span></p>
     <div class="who">
       <div class="who-card">
-        <h3><span class="cn">无人驾驶出租车运营商</span><span class="en">Robotaxi Operators</span></h3>
-        <p class="who-sub"><span class="cn">百度Apollo（萝卜快跑）、小马智行、文远知行等无人驾驶出租车服务运营方</span><span class="en">Baidu Apollo Go, Pony.ai, WeRide and other robotaxi service operators</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于三层架构搭建远程运维中心，用事件库训练AI异常处置模型</span><span class="en">Build remote ops center on three-layer architecture, train AI response models with incident data</span></div>
+        <h3><span class="cn">Robotaxi 运营商（M1）</span><span class="en">Robotaxi Operators (M1)</span></h3>
+        <p class="who-sub"><span class="cn">Waymo、百度 Apollo Go、Pony.ai、文远知行等 Robotaxi 服务运营方</span><span class="en">Waymo, Baidu Apollo Go, Pony.ai, WeRide and other robotaxi operators</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于三层架构搭建远程运维中心，用事件库训练 AI 异常处置模型</span><span class="en">Build remote ops center on three-layer architecture, train AI response models with incident data</span></div>
       </div>
       <div class="who-card">
-        <h3><span class="cn">整车厂（OEM）</span><span class="en">Automotive OEMs</span></h3>
-        <p class="who-sub"><span class="cn">上汽、一汽、长安、广汽等计划推出L4无人驾驶出租车服务的车企</span><span class="en">SAIC, FAW, Changan, GAC and other automakers planning L4 robotaxi services</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">用场景分类体系规划L4服务部署城市，参考KPI设计运营安全目标</span><span class="en">Plan L4 city deployment using taxonomy, set operational safety targets with KPI benchmarks</span></div>
+        <h3><span class="cn">整车厂 OEM（M2/M4/M5/M6）</span><span class="en">Automotive OEMs (M2/M4/M5/M6)</span></h3>
+        <p class="who-sub"><span class="cn">Tesla、蔚来、小鹏、极氪、SAIC、一汽等 —— 从制造商到 L4 服务提供者的转型</span><span class="en">Tesla, NIO, XPeng, Zeekr, SAIC, FAW — transitioning from manufacturer to L4 service provider</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">用责任矩阵规划 L4 订阅服务的运维职责，建立 7×24 ROC 体系</span><span class="en">Plan L4 subscription service responsibilities using the responsibility matrix, build 24/7 ROC</span></div>
       </div>
       <div class="who-card">
-        <h3><span class="cn">远程运营技术公司</span><span class="en">Teleoperation Technology Companies</span></h3>
-        <p class="who-sub"><span class="cn">Vay、Ottopia等提供远程驾驶或远程协助技术方案的公司</span><span class="en">Vay, Ottopia and other remote driving / assistance technology providers</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">在开源基线上构建定制化产品，节省从零开始的研发成本</span><span class="en">Build on open baseline to save R&D cost vs starting from scratch</span></div>
+        <h3><span class="cn">车队服务商（M3）</span><span class="en">Fleet Service Providers (M3)</span></h3>
+        <p class="who-sub"><span class="cn">Hertz、神州租车等向 L4 车队服务转型的租赁公司</span><span class="en">Hertz, leasing companies transitioning to L4 fleet service</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于 M3 模式的责任矩阵设计 SLA 合同，界定平台-车队主-OEM 三方责任</span><span class="en">Design SLAs based on M3 responsibility matrix, clarifying platform-owner-OEM liabilities</span></div>
       </div>
       <div class="who-card">
-        <h3><span class="cn">监管机构与研究者</span><span class="en">Regulators & Researchers</span></h3>
-        <p class="who-sub"><span class="cn">工信部、公安部、各地方交通管理部门，以及高校和科研机构</span><span class="en">Government agencies, local transport authorities, universities and research institutions</span></p>
-        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于事件数据制定监管政策，用分类体系开展安全评价研究</span><span class="en">Develop regulatory policies from incident data, conduct safety evaluation research with taxonomy</span></div>
+        <h3><span class="cn">公共交通运营方（M7/M8）</span><span class="en">Public Transit Operators (M7/M8)</span></h3>
+        <p class="who-sub"><span class="cn">公交公司、园区运营方、轻舟/宇通等 L4 巴士服务方</span><span class="en">Bus companies, park operators, L4 bus providers like QCraft/Yutong</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">用 M7 模式的差异化 KPI 目标（L1 80%）设计公交应急响应流程</span><span class="en">Use M7-specific KPI targets (L1 80%) to design bus emergency response workflows</span></div>
+      </div>
+      <div class="who-card">
+        <h3><span class="cn">物流/专用场景（M9/M10）</span><span class="en">Logistics & Specialized (M9/M10)</span></h3>
+        <p class="who-sub"><span class="cn">美团、京东、Nuro 无人配送；矿区/港口/机场自动驾驶</span><span class="en">Meituan, JD, Nuro delivery; mine/port/airport autonomous operations</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">利用 M9 场景的无乘客特性，设计更宽松的 L3 响应时间目标</span><span class="en">Leverage no-passenger characteristic of M9 to set relaxed L3 response time targets</span></div>
+      </div>
+      <div class="who-card">
+        <h3><span class="cn">监管与研究者</span><span class="en">Regulators & Researchers</span></h3>
+        <p class="who-sub"><span class="cn">工信部、公安部、地方交通管理部门、保险公司、高校和科研机构</span><span class="en">Government agencies, transport authorities, insurance companies, universities and research institutions</span></p>
+        <div class="who-ex"><strong><span class="cn">示例：</span><span class="en">Example: </span></strong><span class="cn">基于 10 模式责任矩阵制定分模式的监管规则，用事件库支持循证决策</span><span class="en">Develop mode-specific regulations using the 10-mode matrix, use incident DB for evidence-based policy</span></div>
       </div>
     </div>
   </section>
 
   <!-- Future Vision -->
   <section>
-    <h2 class="sec-title"><span class="cn">未来展望：无人驾驶出租车的救援保险模式</span><span class="en">Future Vision: Robotaxi Rescue Insurance</span></h2>
-    <p class="sec-sub"><span class="cn">从远程运维到数据驱动的风险管理生态</span><span class="en">From remote operations to a data-driven risk management ecosystem</span></p>
+    <h2 class="sec-title"><span class="cn">未来展望：L4 出行服务的远程运维保险生态</span><span class="en">Future Vision: L4 Mobility Service Insurance Network</span></h2>
+    <p class="sec-sub"><span class="cn">从单一 Robotaxi 远程运维到覆盖 10 种运营模式的数据驱动风险管理生态</span><span class="en">From single-mode Robotaxi to a data-driven risk management ecosystem across 10 operating models</span></p>
 
     <div class="alert" style="border-color:#c8d5e8; background:#f0f4fa;">
-      <p style="color:#2c4a6e;"><span class="cn">当Robotaxi从试点走向规模化运营，每家运营商在每个城市都建独立的远程运维团队，就像每个车主自己养一辆修车队一样不经济。未来的远程运营，可能演化出类似汽车保险的服务形态。</span><span class="en">As robotaxis scale from pilots to city-wide operations, each operator maintaining independent remote operations teams in every city becomes as uneconomical as every car owner maintaining a private repair crew. Future remote operations may evolve into an insurance-like service model.</span></p>
+      <p style="color:#2c4a6e;"><span class="cn">当 L4 自动驾驶从 Robotaxi 走向 OEM 订阅、个人共享、公共交通、物流配送等多种模式，每家运营商/OEM 在每个城市都建独立的远程运维团队就像每个车主自己养一支修车队一样不经济。未来远程运营将演化为跨品牌、跨模式的共享基础设施。</span><span class="en">As L4 expands from Robotaxi to OEM subscriptions, personal sharing, public transit, and logistics, each operator/OEM maintaining independent remote operations teams in every city becomes as uneconomical as every car owner maintaining a private repair crew. Future remote operations will evolve into cross-brand, cross-mode shared infrastructure.</span></p>
     </div>
 
     <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:18px; margin-top:24px;">

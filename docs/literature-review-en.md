@@ -1,10 +1,12 @@
-# Literature Review: Remote Operations and Safety Management for L4 Robotaxis
+# Literature Review: Remote Operations and Safety Management for L4 Autonomous Mobility
 
 ---
 
 > Author: [Yuxin Zhang](https://www.linkedin.com/in/zhangyuxin/)
 > Date: April 2026
-> Document Version: v1.0
+> Document Version: v1.1 (scope expanded from Robotaxi to multi-mode L4 mobility)
+
+> **Scope Note (v1.1):** This review originally focused on L4 Robotaxi remote operations. The scope has been expanded to cover all L4 autonomous mobility operating modes (Robotaxi, OEM direct fleet, personal L4 with OEM subscription, shared personal vehicles, public transit, delivery, specialized environments). See ROAM's [operating-models-v1.0.md](operating-models-v1.0.md) for the 10-mode taxonomy. A full multi-mode literature review is planned for v2.0.
 
 ---
 

@@ -1,12 +1,14 @@
-# L4级自动驾驶出租车远程运营与安全管理综述
+# L4 自动驾驶远程运营与安全管理综述
 
-**A Literature Review on Remote Operations, Teleoperation, and Safety Management for L4 Robotaxis**
+**A Literature Review on Remote Operations and Safety Management for L4 Autonomous Mobility**
 
 ---
 
 > 作者：[Yuxin Zhang](https://www.linkedin.com/in/zhangyuxin/)
-> 日期：2026年4月
-> 文档版本：v1.0
+> 日期：2026 年 4 月
+> 文档版本：v1.1（范围从 Robotaxi 扩展至多模式 L4 出行）
+
+> **范围说明（v1.1）**：本综述最初聚焦于 L4 Robotaxi 远程运营。范围现已扩展至所有 L4 自动驾驶运营模式（Robotaxi、OEM 直营车队、个人所有+OEM 订阅、个人所有+闲时共享、公共交通、物流配送、特定环境专用）。详见 ROAM 的 [operating-models-v1.0.md](operating-models-v1.0.md) 10 模式分类体系。完整的多模式综述规划为 v2.0 版本。
 
 ---
 

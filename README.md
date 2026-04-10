@@ -1,12 +1,15 @@
-# ROAM — RoboTaxi Operations Anomaly Management
+# ROAM — Remote Operations & Anomaly Management
 
-**Open-Source Incident Database, Scenario Taxonomy & Reference Architecture for L4+ Robotaxi Remote Operations**
+**Open-Source Framework for L4 Autonomous Mobility Remote Operations, Incident Management & Safety Governance**
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Incidents](https://img.shields.io/badge/Incidents-16-red.svg)](#incident-database)
 [![Scenarios](https://img.shields.io/badge/Scenarios-6%20categories-orange.svg)](#scenario-taxonomy)
+[![Operating Models](https://img.shields.io/badge/Operating%20Models-10-blue.svg)](taxonomy/operating-models-v1.0.md)
 
 🌐 **Website:** [AutoZYX.github.io/ROAM](https://AutoZYX.github.io/ROAM)
+
+> **Scope (Updated 2026-04):** ROAM started as a Robotaxi-focused framework but has expanded to cover **all L4 autonomous mobility operating models** — including Robotaxi fleets, OEM direct fleets, personally-owned L4 with OEM subscription services, shared-use vehicles, public transit, logistics, and specialized environments. See [Operating Models v1.0](taxonomy/operating-models-v1.0.md) for the 10 modes we currently cover.
 
 ---
 
@@ -16,24 +19,44 @@ On March 31, 2026, nearly 100 Baidu Apollo robotaxis simultaneously shut down on
 
 Three months earlier, a power outage in San Francisco left Waymo vehicles stranded across the city. Emergency services called Waymo's hotline 31 times, waiting a combined 2.5 hours.
 
-These aren't edge cases — they're previews of what happens when L4 robotaxi fleets scale without adequate remote operations infrastructure.
+These aren't edge cases — they're previews of what happens when L4 autonomous fleets scale without adequate remote operations infrastructure.
 
 In March 2026, a [US Congressional investigation](docs/Markey-Remote-Back-Seat-Operators-Report-2026.pdf) revealed that **all seven major AV companies refused to disclose** how frequently their vehicles require remote human intervention — underscoring the urgent need for independent, open operational transparency.
 
 **ROAM provides the open-source foundation for solving this problem:**
 
-1. 📋 **Incident Database** — Structured, searchable records of every known robotaxi anomaly
-2. 🏷️ **Scenario Taxonomy** — 6 categories, 20+ sub-scenarios for classifying operational anomalies
-3. 🏗️ **Reference Architecture** — Three-layer decision model for AI-first remote operations
-4. 📊 **Evaluation Benchmarks** — KPIs and baseline data for measuring platform performance
+1. 📋 **Incident Database** — Structured, searchable records of every known L4 anomaly
+2. 🏷️ **Scenario Taxonomy + Operating Models** — 6 scenario categories + 10 operating modes
+3. 🏗️ **Reference Architecture** — Three-layer decision model with mode-specific responsibility matrix
+4. 📊 **Evaluation Benchmarks** — Mode-differentiated KPIs and baseline data
+5. 🔧 **Technology Pillars** — Six-pillar technical foundation (perception, teleop, wireless, AI trust, cybersecurity, human factors)
+
+## L4 is Not Only Robotaxi
+
+The future of L4 autonomous mobility is far more diverse than today's Robotaxi-centric picture. ROAM covers **10 operating models** across four categories:
+
+| Category | Modes |
+|---------|-------|
+| **Commercial Operations** | M1 Robotaxi Operator · M2 OEM Direct Fleet · M3 Fleet-as-a-Service |
+| **Personal Ownership** | M4 Personal + OEM Subscription · M5 Personal + Shared · M6 Pure Private L4 |
+| **Public Transit** | M7 L4 Bus · M8 Micro-Transit Shuttle |
+| **Specialized Environments** | M9 Last-Mile Delivery · M10 Restricted Environment (mine/port/airport) |
+
+A critical insight: in modes M4–M6, **OEMs transition from manufacturers to service providers**, inheriting remote operations responsibility for privately-owned vehicles. ROAM's responsibility matrix formalizes this shift.
+
+See [`taxonomy/operating-models-v1.0.md`](taxonomy/operating-models-v1.0.md) for full definitions.
 
 ## Who Is This For?
 
 | Audience | Value |
 |----------|-------|
-| **Robotaxi Operators** (Baidu, Pony.ai, WeRide) | Reference architecture for building remote ops platforms |
-| **OEMs** (SAIC, FAW, Changan) | Scenario database for L4 service planning |
+| **Robotaxi Operators** (Waymo, Apollo, Pony.ai, WeRide) | Reference architecture for building remote ops platforms |
+| **OEMs** (Tesla, 蔚来, 小鹏, 极氪, SAIC, FAW, Changan) | Framework for transitioning to L4 service provider role |
+| **Fleet Managers & Rental Companies** (Hertz, 神州租车) | Mode-specific operations playbook for L4 fleet management |
+| **Public Transit Operators** | L4 bus and micro-transit operational framework |
+| **Logistics Companies** (美团、京东、Nuro) | Delivery-specific incident patterns and KPIs |
 | **Startups** building teleops solutions | Open baseline to build upon, not from scratch |
+| **Insurance Companies** | Evidence base for data-driven L4 risk pricing |
 | **Regulators & Standards Bodies** | Evidence-based incident data for policy development |
 | **Researchers** | Structured dataset for autonomous vehicle safety research |
 
@@ -89,18 +112,31 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ```
 ROAM/
-├── incidents/          # Incident database (YAML files)
-├── taxonomy/           # Scenario classification system
-├── architecture/       # Reference architecture & API specs
-├── benchmarks/         # KPIs and baseline data
-├── website/            # GitHub Pages website
-└── docs/               # White papers and research
+├── incidents/              # Incident database (YAML files)
+├── taxonomy/               # Classification systems
+│   ├── scenario-taxonomy-v1.0.md      # 6 scenario categories
+│   ├── operating-models-v1.0.md       # 10 operating modes (NEW)
+│   ├── severity-scale.md
+│   └── urgency-scale.md
+├── architecture/           # Reference architecture & responsibility mapping
+│   ├── reference-architecture.md      # Three-layer decision model
+│   └── responsibility-matrix.md       # 10 modes × 3 layers (NEW)
+├── benchmarks/             # KPIs and baseline data
+├── website/                # GitHub Pages website (archived design)
+└── docs/                   # Deployed site + white papers and research
+    ├── technology-pillars.md          # Six technology pillars (NEW)
+    ├── literature-review-en.md
+    ├── literature-review.md
+    └── related-standards.md
 ```
 
 ## Supported By
 
 - **Jilin University AD Safety Joint Lab** (吉林大学自动驾驶安全联合实验室) — Scenario taxonomy, SOTIF methodology, academic research
 - **DRIVEResearch** (驭研科技) — Naturalistic driving baseline data (750h+ aerial UAV, 10.5M+ trajectories)
+- **Zhuoyu Technology** (卓驭科技, formerly DJI Automotive) — Cross-domain expertise from drone remote operations
+- **University of Waterloo** — International collaboration on AV safety research
+- **Tsinghua University · Chongqing University · FAW Group** (prospective collaborators) — Pending engagement
 
 ## Related Standards
 
