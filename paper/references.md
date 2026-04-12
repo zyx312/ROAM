@@ -36,7 +36,7 @@
 
 [7] International Organization for Standardization. ISO 21448:2022 Road vehicles — Safety of the intended functionality [S]. Geneva: ISO, 2022.
 
-[8] Office of Senator Edward J. Markey. Remote Back Seat Operators: Revealing the autonomous vehicle industry's reliance on human remote assistance operators [R/OL]. Washington D.C.: U.S. Senate, 2026 [2026-04-10]. https://www.markey.senate.gov/news/press-releases/senator-markey-releases-groundbreaking-report-on-autonomous-vehicle-industrys-use-of-remote-human-operators.
+[8] Office of Senator Edward J. Markey. Remote Back Seat Operators: Revealing the autonomous vehicle industry's reliance on human remote assistance operators [R/OL]. Washington D.C.: U.S. Senate, 2026 [2026-04-12]. https://www.markey.senate.gov/news/press-releases/markey-investigation-into-autonomous-vehicle-companies-use-of-remote-assistance-operators-reveals-serious-safety-gaps-lack-of-transparency.
 
 ### 二、国际法规与标准体系（[9]–[20]）
 
@@ -84,7 +84,7 @@
 
 ### 四、学术文献（[29]–[35]）
 
-[29] HOFBAUER M, KUHN C, RIGOLL G, et al. Network latency in teleoperation of connected and autonomous vehicles: A review of trends, challenges, and mitigation strategies [J]. Sensors, 2024, 24(12): 3957.
+[29] KAMTAM R, SHAO Z, HOFBAUER M, et al. Network latency in teleoperation of connected and autonomous vehicles: A review of trends, challenges, and mitigation strategies [J]. Sensors, 2024, 24(12): 3957. (注：DOI 验证确认首作者为 Kamtam，此处已更正)
 
 [30] LIU Y, PENG M, GAO F, et al. 5G-Advanced: Expanding the frontiers of 5G [J]. IEEE Communications Standards Magazine, 2024.
 
