@@ -9,3 +9,7 @@ tools/dmv-importer/texts/
 tools/dmv-importer/output/
 tools/dmv-importer/dmv-index.html
 tools/dmv-importer/*.txt
+
+# Reference documents (keep local, not public)
+GBT草案*.docx
+关于召开*.pdf
