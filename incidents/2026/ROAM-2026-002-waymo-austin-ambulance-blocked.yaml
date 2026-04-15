@@ -68,4 +68,5 @@ sources:
   - url: "https://techcrunch.com/2026/03/25/waymo-robotaxi-roadside-assistance-emergency-first-responders/"
     title: "Waymo robotaxi roadside assistance and emergency first responders - TechCrunch"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

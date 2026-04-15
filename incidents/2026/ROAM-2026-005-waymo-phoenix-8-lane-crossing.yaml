@@ -67,4 +67,5 @@ sources:
   - url: "https://www.autoblog.com/news/waymo-robotaxi-tries-to-cross-8-lanes-passengers-start-screaming"
     title: "Waymo Robotaxi Tries to Cross 8 Lanes - Autoblog"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

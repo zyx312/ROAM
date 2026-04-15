@@ -66,4 +66,5 @@ sources:
   - url: "https://www.autoblog.com/news/waymo-robotaxis-incidents-san-francisco"
     title: "Waymo Robotaxis incidents - Autoblog"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

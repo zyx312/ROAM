@@ -21,4 +21,5 @@ sources:
   - url: "https://www.dmv.ca.gov/portal/file/beepinc_08232023-pdf/"
     title: "Beep collision report 2023-08-23 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
+driving_automation_level: "L4"
 last_updated: "2026-04-15"

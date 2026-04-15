@@ -23,4 +23,5 @@ sources:
   - url: "https://www.dmv.ca.gov/portal/file/zoox_082322-pdf/"
     title: "Zoox collision report 2022-08-23 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
+driving_automation_level: "L4"
 last_updated: "2026-04-15"

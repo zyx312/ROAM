@@ -74,4 +74,5 @@ sources:
   - url: "https://futurism.com/advanced-transport/waymo-shuts-down-again"
     title: "Days After Mass Bricking Event, Waymo Fleet Shuts Down Again - Futurism"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

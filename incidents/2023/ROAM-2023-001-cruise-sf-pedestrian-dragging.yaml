@@ -70,4 +70,5 @@ sources:
   - url: "https://www.cbsnews.com/sanfrancisco/news/nhtsa-robotaxi-cruise-pay-penalty-failing-report-san-francisco-crash-involving-pedestrian/"
     title: "Cruise to pay $1.5M penalty - CBS News"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

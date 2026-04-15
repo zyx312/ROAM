@@ -26,4 +26,5 @@ sources:
   - url: "https://www.dmv.ca.gov/portal/file/waymo_010626-pdf/"
     title: "Waymo collision report 2026-01-06 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
+driving_automation_level: "L4"
 last_updated: "2026-04-15"

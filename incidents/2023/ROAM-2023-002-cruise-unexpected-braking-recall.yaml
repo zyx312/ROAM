@@ -59,4 +59,5 @@ sources:
   - url: "https://techcrunch.com/2024/08/22/cruise-recall-av-fleet-nhtsa-probe-closed/"
     title: "Cruise recall and NHTSA probe closure - TechCrunch"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

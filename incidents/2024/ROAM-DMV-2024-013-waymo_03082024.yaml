@@ -23,4 +23,5 @@ sources:
   - url: "https://www.dmv.ca.gov/portal/file/waymo_03082024-pdf/"
     title: "Waymo collision report 2024-03-08 (CA DMV OL 316)"
 contributor: "CA DMV OL 316 (auto-imported)"
+driving_automation_level: "L4"
 last_updated: "2026-04-15"

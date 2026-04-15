@@ -63,4 +63,5 @@ sources:
   - url: "https://www.21jingji.com/article/20240710/herald/91ef764a0c349a67aa7e29b724ea40cd.html"
     title: "萝卜快跑无人驾驶出租车与行人发生碰撞 - 21经济网"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"

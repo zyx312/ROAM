@@ -65,4 +65,5 @@ sources:
   - url: "https://sfstandard.com/2025/12/23/wtf-happened-waymo-blackout-industry-experts-have-guesses/"
     title: "Industry experts discuss Waymo blackout - SF Standard"
 contributor: "ROAM Core Team"
+driving_automation_level: "L4"
 last_updated: "2026-04-02"
